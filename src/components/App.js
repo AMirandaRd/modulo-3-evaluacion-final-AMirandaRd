@@ -1,19 +1,32 @@
-/* 
-import '../styles/App.css';
-
-function App() {
-  return (
-   
-     // Fichero src/components/App.js */
-
+import { useEffect, useState } from 'react';
 import { Route } from 'react-router-dom';
+import callToApi from '../services/api';
+import CharachterList from './CharacterList';
 
 const App = () => {
+  const [data, setData]=useState([]);
+
+  useEffect(()=>{
+    callToApi().then((initialData)=> {
+      console.log(initialData);
+      setData(initialData)
+    })
+  }
+  
+  ,[]) 
   return (
-    <div>
-  <h1>Hola!</h1>
+    <form>
+  <h1>Personajes de Rick y Morty</h1>
+
+  <input type="text" 
+  name='name'
+  value='control'
+  />
+
+  <CharachterList data={data}/>
+    
       
-    </div>
+    </form>
   );
 };
 
