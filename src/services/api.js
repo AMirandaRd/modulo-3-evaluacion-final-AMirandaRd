@@ -12,6 +12,9 @@ const callToApi = () => {
           name: person.name,
           pict: person.image,
           specie: person.species,
+          origin:person.origin.name,
+          status: person.status,
+          episodes:person.episode.length,
         };
       });
     });

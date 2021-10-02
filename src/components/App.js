@@ -1,8 +1,10 @@
+import '../styles/reset.scss';
 import { useEffect, useState } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch, useRouteMatch, Link } from 'react-router-dom';
 import callToApi from '../services/api';
 import CharachterList from './CharacterList';
 import Filters from './Filters';
+import CharacterDetail from './CharacterDetail';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -13,6 +15,13 @@ const App = () => {
       setData(initialData);
     });
   }, []);
+
+  const routeData = useRouteMatch('/character/:id');
+  const characterId = routeData !== null ? routeData.params.id : '';
+
+  const selectedCharacter = data.find(
+    (character) => character.id === parseInt(characterId)
+  );
 
   const handleSearchByName = (ev) => {
     setSearchByName(ev.currentTarget.value);
@@ -29,14 +38,21 @@ const App = () => {
 
   return (
     <form onSubmit={handleForm}>
-      <h1>Personajes de Rick y Morty</h1>
+      <Switch>
+        <Route path='/character/:id'>
+          <CharacterDetail character={selectedCharacter} />
+        </Route>
+        <Route exact path='/'>
+          <h1>Personajes de Rick y Morty</h1>
 
-      <Filters
-        searchByName={searchByName}
-        handleSearchByName={handleSearchByName}
-      />
+          <Filters
+            searchByName={searchByName}
+            handleSearchByName={handleSearchByName}
+          />
 
-      <CharachterList data={filteredData} />
+          <CharachterList data={filteredData} />
+        </Route>
+      </Switch>
     </form>
   );
 };

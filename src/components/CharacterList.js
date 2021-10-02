@@ -1,8 +1,9 @@
+import '../styles/CharacterList.scss';
 import CharacterCard from './CharacterCard';
 
 const CharachterList = (props) => {
   const eachItemList = props.data.map((character) => (
-    <li className='card' key={character.id}>
+    <li className='card' key={character.id} id={character.id}>
       <CharacterCard character={character} />
     </li>
   ));
