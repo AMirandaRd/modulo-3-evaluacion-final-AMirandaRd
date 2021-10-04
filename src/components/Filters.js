@@ -17,7 +17,7 @@ const Filters = (props) => {
       <option value="Alien">Alien</option>
       </select>
 
-      <form action="" className='StatusSearcher'>
+      <fieldset action="" className='StatusSearcher'>
         <p>Buscar solo personajes que...</p>
         <label htmlFor="status">
          Hayan fallecido
@@ -46,9 +46,9 @@ const Filters = (props) => {
          onChange={props.handleSearchByStatus}
          checked={props.searchByStatus==='unknown'}/>
          </label>
-      </form>
+      </fieldset>
 
-       <form action="" className='GenderSearcher'>
+       <fieldset action="" className='GenderSearcher'>
          <p> Filtrar por sexo:</p>
          <label htmlFor="gender">
          Mujer
@@ -76,7 +76,8 @@ const Filters = (props) => {
          onChange={props.handleSearchByGender}
          checked={props.searchByGender==='unknown'}/>
          </label>
-       </form>
+         </fieldset>
+       
     </section>
      );
 };

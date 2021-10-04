@@ -89,7 +89,7 @@ const App = () => {
             searchBySpecie={searchBySpecie}
             handleSearchBySpecie={handleSearchBySpecie}
             searchByStatus={searchByStatus}
-            handleSearchbyStatus={handleSearchByStatus}
+            handleSearchByStatus={handleSearchByStatus}
             searchByGender={searchByGender}
             handleSearchByGender={handleSearchByGender} 
           />
