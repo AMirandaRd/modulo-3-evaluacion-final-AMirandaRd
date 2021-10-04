@@ -1,5 +1,3 @@
-const resultsLimit = 20;
-
 const callToApi = () => {
   return fetch(
     'https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json'
@@ -15,6 +13,7 @@ const callToApi = () => {
           origin:person.origin.name,
           status: person.status,
           episodes:person.episode.length,
+          gender:person.gender,
         };
       });
     });
