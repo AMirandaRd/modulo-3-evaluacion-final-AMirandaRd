@@ -1,2 +1,0 @@
-body{box-sizing:border-box}body,h1,h2,h3,h4,h5,h6,p,ul{margin:0;padding:0}.card-list{width:100vw;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-evenly;list-style:none}.card{width:40vw;margin:10px,10px,10px,10px;border:2px solid #abcccc}.pictures{width:30vw}.character-name{font-size:14px;margin:8px,0,8px,8px}@media (min-width:768px){.character-name{font-size:30px}}.character-specie{font-size:12px}@media (min-width:768px){.character-specie{font-size:20px}}
-/*# sourceMappingURL=main.c241ced9.chunk.css.map */
