@@ -1,8 +1,42 @@
+.search-name {
+  border: green solid 1px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  width: 150px;
+  margin-bottom: 10px;
+  @media (min-width: 768px) {
+    font-size: 25px;
+    width: 500px;
+    margin-bottom: 30px;
+  }
+}
+.search-name::placeholder {
+  color: rgb(12, 197, 36);
+}
 
+.search-specie {
+  display: block;
+  border: green solid 1px;
+  color: green;
+  font-family: Akronim;
+  font-size: 18px;
+  @media (min-width: 768px) {
+    font-size: 30px;
+  }
+}
 
 .StatusSearcher,
-.GenderSearcher{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 10px;}
+.GenderSearcher {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: green;
+  font-family: Akronim;
+  font-size: 18px;
+  margin-top: 15px;
+  border: none;
+  @media (min-width: 768px) {
+    font-size: 30px;
+  }
+}

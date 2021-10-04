@@ -11,7 +11,7 @@ const Filters = (props) => {
         value={props.searchByName}
         onChange={props.handleSearchByName}
       />
-      <select name="specie" id="specie" value={props.searchBySpecie} onChange={props.handleSearchBySpecie}>
+      <select className="search-specie" name="specie" id="specie" value={props.searchBySpecie} onChange={props.handleSearchBySpecie}>
       <option value="all">Todos</option>
       <option value="Human">Humano</option>
       <option value="Alien">Alien</option>

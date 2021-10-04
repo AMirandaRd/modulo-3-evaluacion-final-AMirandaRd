@@ -1,18 +1,17 @@
-.pictures{
-    width: 30vw;
+.pictures {
+  width: 30vw;
 }
-.character-name{
-font-size: 14px;
-margin: 8px,0,8px,8px;
-@media (min-width: 768px){
+.character-name {
+  font-size: 14px;
+  margin: 8px, 0, 8px, 8px;
+  @media (min-width: 768px) {
     font-size: 30px;
-}
+  }
 }
 
-.character-specie{
-    font-size: 12px;
-    @media (min-width: 768px){
-        font-size: 20px;
-    }
-
+.character-specie {
+  font-size: 12px;
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
 }

@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom';
-import sorrylogo from '../images/losiento.jpg'
+import sorrylogo from '../images/losiento.jpg';
 
 const CharacterDetail = (props) => {
   if (props.character === undefined) {
     return (
       <section>
         <p>El personaje no existe</p>
-        <img src={sorrylogo} alt='failed attempt'/>
-
+        <img src={sorrylogo} alt='failed attempt' />
       </section>
     );
   } else {

@@ -1,4 +1,5 @@
 import '../styles/reset.scss';
+import '../styles/Images.scss'
 import { useEffect, useState } from 'react';
 import { Route, Switch, useRouteMatch} from 'react-router-dom';
 import sorry from '../images/losiento.jpg'
@@ -100,7 +101,7 @@ const App = () => {
         <Route>
           <section>
             <p> Ese personaje no existe!</p>
-            <img src={sorry} alt="Search again" />
+            <img className='all-images' src={sorry} alt="Search again" />
 
           </section>
         </Route>
