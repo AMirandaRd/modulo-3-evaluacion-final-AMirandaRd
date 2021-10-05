@@ -2,7 +2,7 @@
   width: 30vw;
 }
 .character-name {
-  font-size: 14px;
+  font-size: 16px;
   margin: 8px, 0, 8px, 8px;
   @media (min-width: 768px) {
     font-size: 30px;
@@ -10,8 +10,14 @@
 }
 
 .character-specie {
-  font-size: 12px;
+  font-size: 14px;
   @media (min-width: 768px) {
     font-size: 20px;
   }
+}
+.link-card{
+  text-decoration: none;
+  color:black;
+  font-family: 'Stick No Bills'
+  ;
 }

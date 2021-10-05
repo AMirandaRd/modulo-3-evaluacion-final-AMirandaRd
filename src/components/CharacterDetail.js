@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import sorrylogo from '../images/losiento.jpg';
-
+import '../styles/CardDetail.scss'
 const CharacterDetail = (props) => {
   if (props.character === undefined) {
     return (
@@ -17,9 +17,9 @@ const CharacterDetail = (props) => {
           src={props.character.pict}
           alt={`Picture of ${props.character.name}`}
         />
-        <ul>
-          <li className='character-name'>{props.character.name}</li>
-          <li className='character-specie'> {props.character.specie}</li>
+        <ul className='detailed-list'>
+          <li>{props.character.name}</li>
+          <li> {props.character.specie}</li>
           <li>Natural de:{props.character.origin}</li>
           <li> Estado:{props.character.status}</li>
           <li>Sexo:{props.character.gender}</li>
@@ -27,7 +27,7 @@ const CharacterDetail = (props) => {
         </ul>
         <Link to='/'>
           {' '}
-          <button>volver</button>
+          <button className='return'>volver</button>
         </Link>
       </>
     );

@@ -46,6 +46,17 @@ const Filters = (props) => {
          onChange={props.handleSearchByStatus}
          checked={props.searchByStatus==='unknown'}/>
          </label>
+
+         <label htmlFor="status">
+         Me da igual
+         <input type="radio"
+         name='status'
+         value=''
+         onChange={props.handleSearchByStatus}
+         checked={props.searchByStatus===''}/>
+         </label>
+
+
       </fieldset>
 
        <fieldset action="" className='GenderSearcher'>
@@ -76,7 +87,17 @@ const Filters = (props) => {
          onChange={props.handleSearchByGender}
          checked={props.searchByGender==='unknown'}/>
          </label>
+
+         <label htmlFor="gender">
+         Me da igual
+         <input type="radio"
+         name='gender'
+         value=''
+         onChange={props.handleSearchByGender}
+         checked={props.searchByGender===''}/>
+         </label>
          </fieldset>
+
        
     </section>
      );

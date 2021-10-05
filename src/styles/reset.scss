@@ -1,7 +1,9 @@
 body {
     margin: 0;
+    margin-left:15px;
     padding: 0;
     box-sizing: border-box;
+    font-size: 18px;
     background: linear-gradient( to right, #8AC957, #59B1C7);
   }
   
@@ -16,3 +18,4 @@ body {
     margin: 0;
     padding: 0;
   }
+  li{list-style: none;}

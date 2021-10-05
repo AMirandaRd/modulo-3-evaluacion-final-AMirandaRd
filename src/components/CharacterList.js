@@ -1,6 +1,6 @@
 import '../styles/CharacterList.scss';
 import '../styles/Images.scss'
-import notfound from '../images/rick-and-morty.jpg'
+import sorry from '../images/losiento.jpg'
 import CharacterCard from './CharacterCard';
 
 const CharachterList = (props) => {
@@ -8,8 +8,8 @@ const CharachterList = (props) => {
   if (props.data.length === 0){
     return(
       <section>
-        <p>Ese nombre no se ha encontrado...</p>
-        <img className='all-images' src={notfound} alt="Character Missed" />
+        <h3>Ese personaje no se ha encontrado...</h3>
+        <img className='all-images' src={sorry} alt="Search again" />
       </section>
     )
   } else{

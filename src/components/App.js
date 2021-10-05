@@ -2,19 +2,20 @@ import '../styles/reset.scss';
 import '../styles/Images.scss'
 import { useEffect, useState } from 'react';
 import { Route, Switch, useRouteMatch} from 'react-router-dom';
-import sorry from '../images/losiento.jpg'
+
 import callToApi from '../services/api';
 import CharachterList from './CharacterList';
 import Filters from './Filters';
 import CharacterDetail from './CharacterDetail';
 import Header from './Header';
+import notfound from '../images/rick-and-morty.jpg'
 
 const App = () => {
   const [data, setData] = useState([]);
   const [searchByName, setSearchByName] = useState('');
   const [searchBySpecie, setSearchBySpecie]= useState('all');
-  const [searchByStatus, setSearchByStatus]= useState('');
-  const [searchByGender, setSearchByGender]=useState('')
+  const [searchByStatus, setSearchByStatus]= useState(false);
+  const [searchByGender, setSearchByGender]=useState(false)
 
  useEffect(() => {
     callToApi().then((initialData) => {
@@ -59,13 +60,13 @@ const App = () => {
   
   .filter((character) => searchBySpecie === 'all' || searchBySpecie === character.specie
       )
-  .filter((character) =>{ if(searchByStatus === ''){
+  .filter((character) =>{ if(searchByStatus === ''|| searchByStatus === false){
     return true
   }else if( searchByStatus === character.status){
     return character
   }
 })
-  .filter((character)=>{if(searchByGender===''){
+  .filter((character)=>{if(searchByGender===''|| searchByGender=== false){
     return true
   }else if (searchByGender=== character.gender){
     return character
@@ -101,8 +102,8 @@ const App = () => {
         <Route>
           <section>
             <p> Ese personaje no existe!</p>
-            <img className='all-images' src={sorry} alt="Search again" />
-
+            
+            <img className='all-images' src={notfound} alt="Character Missed" />
           </section>
         </Route>
       </Switch>

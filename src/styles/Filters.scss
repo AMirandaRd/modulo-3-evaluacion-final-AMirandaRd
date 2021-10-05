@@ -1,11 +1,10 @@
 .search-name {
   border: green solid 2px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Stick No Bills';
   font-size: 16px;
-  width: 250px;
+  width: 190px;
   height: 30px;
   margin-bottom: 10px;
-  transform: translateX(200px);
   @media (min-width: 768px) {
     font-size: 25px;
     width: 500px;
@@ -19,8 +18,10 @@
 .search-specie {
   display: block;
   border: green solid 1px;
+  background-color: white;
+  width: 150px;
   color: green;
-  font-family: Akronim;
+  font-family: 'Stick No Bills';
   font-size: 18px;
   @media (min-width: 768px) {
     font-size: 30px;
@@ -33,12 +34,15 @@
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 10px;
-  color: green;
+  color: rgb(1, 63, 1);
   font-family: Akronim;
   font-size: 18px;
   margin-top: 15px;
   border: none;
   @media (min-width: 768px) {
     font-size: 30px;
+    flex-direction: row;
   }
 }
+
+
