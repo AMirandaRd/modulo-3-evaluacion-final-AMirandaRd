@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import sorrylogo from '../images/losiento.jpg';
-import '../styles/CardDetail.scss'
+import '../styles/CardDetail.scss';
 const CharacterDetail = (props) => {
   if (props.character === undefined) {
     return (
