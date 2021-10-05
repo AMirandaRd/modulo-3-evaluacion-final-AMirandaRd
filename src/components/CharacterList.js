@@ -5,7 +5,6 @@ import CharacterCard from './CharacterCard';
 import { Link } from 'react-router-dom';
 import '../styles/CardDetail.scss';
 const CharachterList = (props) => {
-  console.log(props.data);
   if (props.data.length === 0) {
     return (
       <section>
