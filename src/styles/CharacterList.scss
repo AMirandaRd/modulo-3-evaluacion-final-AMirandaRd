@@ -1,6 +1,7 @@
 .card-list {
+  margin-left: 20px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 50%);
   grid-gap: 10px;
   list-style: none;
 }
