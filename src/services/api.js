@@ -11,6 +11,7 @@ const callToApi = () => {
           pict: person.image,
           specie: person.species,
           origin:person.origin.name,
+          location:person.location.name,
           status: person.status,
           episodes:person.episode.length,
           gender:person.gender,

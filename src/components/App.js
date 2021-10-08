@@ -17,6 +17,7 @@ const App = () => {
   const [searchBySpecie, setSearchBySpecie] = useState('all');
   const [searchByStatus, setSearchByStatus] = useState(false);
   const [searchByGender, setSearchByGender] = useState(false);
+  const [searchByLocation, setSearchByLocation] =useState('')
 
   useEffect(() => {
     callToApi().then((initialData) => {
@@ -37,6 +38,9 @@ const App = () => {
   const handleSearchByName = (ev) => {
     setSearchByName(ev.currentTarget.value);
   };
+  const handleLocation=(ev)=>{
+    setSearchByLocation(ev.currentTarget.value)
+  }
 
   const handleSearchBySpecie = (ev) => {
     setSearchBySpecie(ev.currentTarget.value);
@@ -57,6 +61,11 @@ const App = () => {
       character.name
         .toLocaleLowerCase()
         .includes(searchByName.toLocaleLowerCase())
+    )
+    .filter((character)=>
+    character.location
+    .toLocaleLowerCase()
+    .includes(searchByLocation.toLocaleLowerCase())
     )
 
     .filter(
@@ -108,7 +117,7 @@ const App = () => {
             searchByGender={searchByGender}
             handleSearchByGender={handleSearchByGender}
           />
-
+ <input type="text" onChange={handleLocation} value={searchByLocation}/>
           <CharachterList data={filteredData} />
         </Route>
         <Route>

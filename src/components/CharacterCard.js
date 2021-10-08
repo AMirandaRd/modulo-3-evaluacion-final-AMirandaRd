@@ -1,4 +1,6 @@
 import '../styles/CharacterCard.scss';
+import '../images/heart.png';
+import '../images/dead.png'
 import { Link } from 'react-router-dom';
 
 const CharacterCard = (props) => {
@@ -11,6 +13,7 @@ const CharacterCard = (props) => {
       />
       <h3 className='character-name'>{props.character.name}</h3>
       <h4 className='character-specie'> {props.character.specie}</h4>
+      
     </Link>
   );
 };
